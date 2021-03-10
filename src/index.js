@@ -2,13 +2,11 @@ const axios = require("axios");
 const _ = require("lodash");
 const dateFns = require("date-fns");
 const pt = require("date-fns/locale/pt-BR");
+require("dotenv-safe").config();
 
-// INSIRA AQUI AS VARIÁVEIS
-const DAYS = 30;
-const ROCKETCHAT_USER = "";
-const ROCKETCHAT_PASSWORD = "";
-const ROCKETCHAT_URL = "";
-// FIM DE INSERÇÃO
+const ROCKETCHAT_USER = process.env.ROCKETCHAT_USER;
+const ROCKETCHAT_PASSWORD = process.env.ROCKETCHAT_PASSWORD;
+const ROCKETCHAT_URL = process.env.ROCKETCHAT_URL;
 
 const rocketchat = axios.create({
     baseURL: ROCKETCHAT_URL,
