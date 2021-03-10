@@ -4,6 +4,7 @@ const dateFns = require("date-fns");
 const pt = require("date-fns/locale/pt-BR");
 require("dotenv-safe").config();
 
+const DAYS = process.env.DAYS;
 const ROCKETCHAT_USER = process.env.ROCKETCHAT_USER;
 const ROCKETCHAT_PASSWORD = process.env.ROCKETCHAT_PASSWORD;
 const ROCKETCHAT_URL = process.env.ROCKETCHAT_URL;
